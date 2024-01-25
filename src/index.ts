@@ -26,12 +26,12 @@ const getEmoji = (emoji?: boolean | string): string => {
   return "";
 };
 
-const getColor = (color?: LoggerColor | false): LoggerColor | undefined => {
+const getColor = (color?: LoggerColor | boolean): LoggerColor | undefined => {
   if (color === false) {
     return undefined;
   }
 
-  if (color) {
+  if (color && typeof color === "object") {
     return color;
   }
 

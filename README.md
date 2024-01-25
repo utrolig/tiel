@@ -56,7 +56,7 @@ export type CreateLoggerOptions = {
   /**
    * Customize or disable colors for logger
    */
-  color?: LoggerColor | false;
+  color?: LoggerColor | boolean;
   /**
    * Customize or disable emoji prefix for logger
    */
