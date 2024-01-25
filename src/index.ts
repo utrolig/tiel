@@ -1,29 +1,54 @@
-import { defaultColorList } from "./colors";
+import { defaultColorList, defaultEmojiList } from "./colors";
 import { LogLevels, type LogLevelName, LogLevelNames } from "./levels";
 import { noop, noopLogger } from "./noop";
-import type { CreateLoggerOptions, LoggerName, TielInstance } from "./types";
+import type {
+  CreateLoggerOptions,
+  LoggerColor,
+  LoggerName,
+  TielInstance,
+} from "./types";
 import { getScope, isLoggerEnabled } from "./util";
 
 let _loggerCount = -1;
+
+const getEmoji = (emoji?: boolean | string): string => {
+  if (typeof emoji === "string") {
+    return emoji;
+  }
+
+  if (emoji) {
+    const emoji = defaultEmojiList[
+      _loggerCount % defaultEmojiList.length
+    ] as string;
+    return emoji;
+  }
+
+  return "";
+};
+
+const getColor = (color?: LoggerColor | false): LoggerColor | undefined => {
+  if (color === false) {
+    return undefined;
+  }
+
+  if (color) {
+    return color;
+  }
+
+  return defaultColorList[
+    _loggerCount % defaultColorList.length
+  ] as LoggerColor;
+};
 
 const _createLogger = (
   name: LoggerName,
   options: CreateLoggerOptions
 ): TielInstance => {
-  const useEmojis = options.emojiPrefix !== false;
-  const emojiPrefix = useEmojis
-    ? defaultColorList[_loggerCount % defaultColorList.length]?.emoji
-    : "";
-  const colorList = options.colorList ?? defaultColorList;
+  const emoji = getEmoji(options.emoji);
+  const color = getColor(options.color);
 
-  const useColors = options.colors !== false;
-
-  const color = useColors
-    ? colorList[_loggerCount % colorList.length]
-    : undefined;
-
-  const colorPrefix = useColors ? `%c` : "";
-  const prefixedScope = `${colorPrefix}${emojiPrefix} <${name}> `;
+  const colorPrefix = color ? `%c` : "";
+  const prefixedScope = `${colorPrefix}${emoji} <${name}> `;
   const styles = color
     ? `background-color: ${color.backgroundColor}; color: ${color.color}; font-weight: bold; padding: 2px; border-radius: 4px; display: inline-flex; align-items: center;`
     : "";
