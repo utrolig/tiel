@@ -13,11 +13,11 @@ import { createLogger } from "../src";
 localStorage.clear();
 localStorage.setItem("DEBUG", "app:controller,app:default");
 
-let appControllerLogger = createLogger("app:controller", {
-  emojiPrefix: false,
+const appControllerLogger = createLogger("app:controller", {
+  emoji: false,
 });
-let appServiceLogger = createLogger("app:service", {
-  colors: false,
+const appServiceLogger = createLogger("app:service", {
+  color: false,
 });
 
 appServiceLogger.log("With colors disabled");
