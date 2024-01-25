@@ -24,24 +24,24 @@ export const defaultEmojiList = [
 ];
 
 export const defaultColorList: LoggerColor[] = [
-  { backgroundColor: "#FF5733", color: "#FFFFFF" }, // Vibrant Orange with White
-  { backgroundColor: "#33FF57", color: "#000000" }, // Bright Green with Black
-  { backgroundColor: "#3357FF", color: "#FFFFFF" }, // Bright Blue with White
-  { backgroundColor: "#FF33A8", color: "#FFFFFF" }, // Vivid Pink with White
-  { backgroundColor: "#33FFF6", color: "#000000" }, // Bright Cyan with Black
-  { backgroundColor: "#F4D03F", color: "#000000" }, // Mustard Yellow with Black
-  { backgroundColor: "#9B59B6", color: "#FFFFFF" }, // Deep Purple with White
-  { backgroundColor: "#E74C3C", color: "#FFFFFF" }, // Bright Red with White
-  { backgroundColor: "#3498DB", color: "#FFFFFF" }, // Medium Blue with White
-  { backgroundColor: "#2ECC71", color: "#000000" }, // Medium Green with Black
-  { backgroundColor: "#1ABC9C", color: "#FFFFFF" }, // Teal with White
-  { backgroundColor: "#F39C12", color: "#000000" }, // Bright Orange with Black
-  { backgroundColor: "#D35400", color: "#FFFFFF" }, // Burnt Orange with White
-  { backgroundColor: "#C0392B", color: "#FFFFFF" }, // Dark Red with White
-  { backgroundColor: "#8E44AD", color: "#FFFFFF" }, // Dark Purple with White
-  { backgroundColor: "#2980B9", color: "#FFFFFF" }, // Strong Blue with White
-  { backgroundColor: "#27AE60", color: "#000000" }, // Dark Green with Black
-  { backgroundColor: "#16A085", color: "#FFFFFF" }, // Dark Cyan with White
-  { backgroundColor: "#D35400", color: "#FFFFFF" }, // Pumpkin with White
-  { backgroundColor: "#BDC3C7", color: "#000000" }, // Silver with Black
+  { backgroundColor: "#0048BA", color: "white" }, // Absolute Zero
+  { backgroundColor: "#003153", color: "white" }, // Prussian Blue
+  { backgroundColor: "#002366", color: "white" }, // Royal Blue
+  { backgroundColor: "#2E2D88", color: "white" }, // Cosmic Cobalt
+  { backgroundColor: "#32174D", color: "white" }, // Russian Violet
+  { backgroundColor: "#1034A6", color: "white" }, // Egyptian Blue
+  { backgroundColor: "#4C516D", color: "white" }, // Independence
+  { backgroundColor: "#3C1414", color: "white" }, // Dark Sienna
+  { backgroundColor: "#3B3C36", color: "white" }, // Rifle Green
+  { backgroundColor: "#3D0C02", color: "white" }, // Black Bean
+  { backgroundColor: "#1B4D3E", color: "white" }, // Brunswick Green
+  { backgroundColor: "#1B1B1B", color: "white" }, // Eerie Black
+  { backgroundColor: "#003B6F", color: "white" }, // Dark Midnight Blue
+  { backgroundColor: "#1F262A", color: "white" }, // Dark Jungle Green
+  { backgroundColor: "#0A0A0A", color: "white" }, // Rich Black
+  { backgroundColor: "#00416A", color: "white" }, // Dark Imperial Blue
+  { backgroundColor: "#062A78", color: "white" }, // Sapphire Blue
+  { backgroundColor: "#1D2951", color: "white" }, // Space Cadet
+  { backgroundColor: "#463F3A", color: "white" }, // Dark Liver
+  { backgroundColor: "#343434", color: "white" }, // Jet
 ];

@@ -16,14 +16,14 @@ const getEmoji = (emoji?: boolean | string): string => {
     return emoji;
   }
 
-  if (emoji) {
-    const emoji = defaultEmojiList[
-      _loggerCount % defaultEmojiList.length
-    ] as string;
-    return emoji;
+  if (emoji === false) {
+    return "";
   }
 
-  return "";
+  const output = defaultEmojiList[
+    _loggerCount % defaultEmojiList.length
+  ] as string;
+  return output;
 };
 
 const getColor = (color?: LoggerColor | boolean): LoggerColor | undefined => {
@@ -75,7 +75,10 @@ const _createLogger = (
       LogLevels[method.toUpperCase() as LogLevelName] >= level;
 
     const fn = isLevelEnabled
-      ? console[method].bind(console, prefixedScope, styles)
+      ? console[method].bind(
+          console,
+          ...[prefixedScope, styles].filter(Boolean)
+        )
       : noop;
 
     logger[method] = fn;
