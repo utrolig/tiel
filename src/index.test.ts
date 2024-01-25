@@ -1,5 +1,5 @@
 import { createLogger } from "./";
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect } from "vitest";
 
 describe("createLogger", () => {
   it("should return a logger", () => {
