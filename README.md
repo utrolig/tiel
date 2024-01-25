@@ -54,23 +54,13 @@ The default `LogLevel` is `log`. You can set a higher or lower loglevel by using
 ```ts
 export type CreateLoggerOptions = {
   /**
-   * Enable or disable background colors for logger scopes
+   * Customize or disable colors for logger
    */
-  colors?: boolean;
-
+  color?: LoggerColor | false;
   /**
-   * Custom background color list for logger scopes.
-   * Colors are assigned in order of logger creation.
-   *
-   * If not provided, the default color list will be used.
+   * Customize or disable emoji prefix for logger
    */
-  colorList?: LoggerColor[];
-
-  /**
-   * Prefix logger scopes with a unique emoji for easier visual identification
-   */
-  emojiPrefix?: boolean;
-
+  emoji?: boolean | string;
   /**
    * Custom storage interface adhering to localStorage interface for overriding the default storage
    */
