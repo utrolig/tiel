@@ -10,7 +10,7 @@
 [![NPM Downloads](https://img.shields.io/npm/dm/@stibstack/tiel)](https://www.npmjs.com/package/@stibstack/tiel)
 [![License](https://img.shields.io/github/license/utrolig/tiel)](https://github.com/utrolig/tiel/blob/main/LICENSE)
 
-A simple browser logger wrapping `console` and adding scopes, colors and emojis.
+A simple logger for the browser, wrapping `console` and adding scopes, colors and emojis.
 
 </div>
 
